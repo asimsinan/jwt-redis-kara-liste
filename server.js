@@ -48,8 +48,8 @@ const tokenDogrula = async (request, response, next) => {
         message: error.message,
       });
     }
-    request.kullaniciID = user.kullaniciAdi;
-    request.tokenGecerlilikSuresi = user.tokenGecerlilikSuresi;
+    request.kullaniciID = user.kullaniciadi;
+    request.tokenGecerlilikSuresi = user.exp;
     request.token = token;
     next();
   });
